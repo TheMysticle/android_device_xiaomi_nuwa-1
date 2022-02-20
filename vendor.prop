@@ -354,3 +354,4 @@ ro.vendor.net.enable_passpoint_r1=1
 # Sensors
 ro.vendor.sensors.xiaomi.double_tap=true
 ro.vendor.sensors.xiaomi.single_tap=true
+ro.vendor.sensors.xiaomi.udfps=true
