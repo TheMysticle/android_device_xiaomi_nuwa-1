@@ -82,6 +82,12 @@ blob_fixups: blob_fixups_user_type = {
         .add_line_if_missing('pipe2: 1'),
     'vendor/etc/qcril_database/upgrade/config/6.0_config.sql' : blob_fixup()
         .regex_replace('(persist\\.vendor\\.radio\\.redir_party_num.*)true', '\\1false'),
+    (
+        'vendor/bin/hw/dolbycodec2',
+        'vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service',
+        'vendor/bin/hw/vendor.dolby.media.c2@1.0-service',
+    ): blob_fixup()
+        .add_needed('libstagefright_foundation-v33.so'),
     'vendor/lib64/c2.dolby.client.so' : blob_fixup()
         .add_needed('dolbycodec_shim.so'),
     'vendor/lib64/libqcodec2_core.so' : blob_fixup()
