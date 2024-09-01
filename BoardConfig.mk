@@ -164,6 +164,9 @@ BOARD_ROOT_EXTRA_SYMLINKS += /lib/modules:/vendor/lib/modules
 TARGET_BOARD_PLATFORM := kalama
 TARGET_BOOTLOADER_BOARD_NAME := kalama
 
+# Powershare
+TARGET_POWERSHARE_PATH := /sys/class/qcom-battery/reverse_chg_mode
+
 # Recovery
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/fstab.qcom
