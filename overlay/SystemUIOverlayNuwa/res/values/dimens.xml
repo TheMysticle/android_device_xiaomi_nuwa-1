@@ -26,5 +26,5 @@
     <dimen name="rounded_corner_content_padding">72.0px</dimen>
 
     <!-- Pixel pitch of the device. um/px -->
-    <item name="pixel_pitch" format="float" type="dimen">48.28</item>
+    <item name="pixel_pitch" format="float" type="dimen">48.71</item>
 </resources>
