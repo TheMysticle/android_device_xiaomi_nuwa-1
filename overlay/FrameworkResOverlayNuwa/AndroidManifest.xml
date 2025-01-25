@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.lineageos.frameworkresoverlay.fuxi">
+    package="org.lineageos.frameworkresoverlay.nuwa">
     <application android:hasCode="false" />
     <overlay android:isStatic="true"
              android:priority="1"
              android:targetPackage="android"
-             android:targetName="FuxiFrameworkResOverlay" />
+             android:targetName="NuwaFrameworkResOverlay" />
 </manifest>

@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),fuxi)
+ifeq ($(TARGET_DEVICE),nuwa)
 include $(LOCAL_PATH)/vendor-symlinks.mk
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 

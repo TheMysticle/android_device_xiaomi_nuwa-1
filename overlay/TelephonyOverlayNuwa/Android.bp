@@ -5,7 +5,7 @@
 //
 
 runtime_resource_overlay {
-    name: "FrameworkResOverlayFuxi",
+    name: "TelephonyOverlayNuwa",
     sdk_version: "current",
     vendor: true,
 }

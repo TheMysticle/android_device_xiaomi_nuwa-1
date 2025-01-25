@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.lineageos.settingsoverlay.fuxi">
+    package="org.lineageos.systemuioverlay.nuwa">
     <application android:hasCode="false" />
     <overlay android:isStatic="true"
              android:priority="1"
-             android:targetPackage="com.android.settings"
-             android:targetName="FuxiSettingsOverlay" />
+             android:targetPackage="com.android.systemui"
+             android:targetName="NuwaSystemUIOverlay" />
 </manifest>

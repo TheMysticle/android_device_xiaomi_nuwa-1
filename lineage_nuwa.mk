@@ -9,14 +9,14 @@ $(call inherit-product, build/make/target/product/full_base_telephony.mk)
 $(call inherit-product, build/make/target/product/core_64_bit_only.mk)
 
 # Inherit device-specific configurations
-$(call inherit-product, device/xiaomi/fuxi/device.mk)
+$(call inherit-product, device/xiaomi/nuwa/device.mk)
 
 # Inherit LineageOS configurations
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_fuxi
-PRODUCT_DEVICE := fuxi
-PRODUCT_MODEL := 2211133C
+PRODUCT_NAME := lineage_nuwa
+PRODUCT_DEVICE := nuwa
+PRODUCT_MODEL := 2210132C
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 
