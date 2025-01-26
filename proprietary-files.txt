@@ -1,9 +1,9 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are taken from Xiaomi 13 AQ3A.240912.001 OS2.0.100.0.VMCCNXM
+## are taken from Xiaomi 13 Pro AQ3A.240912.001 OS2.0.100.0.VMBCNXM
 
 # ACDBs
-odm/etc/acdbdata/Tutu/Tutu_acdb_cal.acdb
-odm/etc/acdbdata/Tutu/Tutu_workspaceFileXml.qwsp
+odm/etc/acdbdata/Forte/Forte_acdb_cal.acdb
+odm/etc/acdbdata/Forte/Forte_workspaceFileXml.qwsp
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_workspaceFileXml.qwsp
 vendor/etc/acdbdata/ffv_models/ffv__5.0.1_0.1__3.0.0_0.0__eai_2.10_enpu3.pmd
@@ -305,6 +305,9 @@ odm/etc/camera/132_MonochromeHighContrast.png
 odm/etc/camera/133_MonochromeBrown.png
 odm/etc/camera/134_MonochromeBlue.png
 odm/etc/camera/CFR_para_UW_V01.bin
+odm/etc/camera/CFR_para_UW_V01_HD.bin
+odm/etc/camera/CFR_para_UW_V01_HDR.bin
+odm/etc/camera/CFR_para_UW_V01_SN.bin
 odm/etc/camera/GpuKernelRepo.pb
 odm/etc/camera/MILDC_CALIB_0x01.bin
 odm/etc/camera/MILDC_CAPTURE_PARAMS.json
@@ -350,6 +353,8 @@ odm/etc/camera/dualcam_depth_params_pro.json
 odm/etc/camera/dualcam_mdbokeh_params_depth.json
 odm/etc/camera/dualcam_mdbokeh_params_pro.json
 odm/etc/camera/eisoverridesettings.txt
+odm/etc/camera/ellc.bin
+odm/etc/camera/ellc_params.json
 odm/etc/camera/ellv.bin
 odm/etc/camera/ellv_params.xml
 odm/etc/camera/enhance_motiontuning.xml
@@ -363,8 +368,14 @@ odm/etc/camera/facefocus_models/facevalid.dlc
 odm/etc/camera/facesr_hd_composite_ref_4.3.15_qcom8550_qnn_segqnn_qnn2.3_qualityv35r2.model
 odm/etc/camera/hdrcheckerextendparamsettings.yml
 odm/etc/camera/hdrcheckerparamsettings.yml
+odm/etc/camera/his_gme_tele.yaml
+odm/etc/camera/his_gme_ultra.yaml
 odm/etc/camera/his_gme_wide.yaml
+odm/etc/camera/his_preview_tele.yaml
+odm/etc/camera/his_preview_ultra.yaml
 odm/etc/camera/his_preview_wide.yaml
+odm/etc/camera/his_video_tele.yaml
+odm/etc/camera/his_video_ultra.yaml
 odm/etc/camera/his_video_wide.yaml
 odm/etc/camera/mage_yuv_hdr_opencl.bin
 odm/etc/camera/mdbokeh_bwt.bin
@@ -713,7 +724,6 @@ odm/etc/camera/sky_segmentation_qat.dlc
 odm/etc/camera/snsc.bin
 odm/etc/camera/snsc_params.json
 odm/etc/camera/ultrazoom.bin
-odm/etc/camera/ultrazoom_ii.bin
 odm/etc/camera/video_stabilizer.xml
 odm/etc/camera/vidhance_calibration
 odm/etc/camera/xiaomi/EcoCloudInfo.json
@@ -741,9 +751,7 @@ odm/etc/camera/xiaomi/superhdsnapshot.json
 odm/etc/camera/xiaomi/thirdpartydualbokehyuvsnapshot.json
 odm/etc/camera/xiaomi/thirdpartyjpegsnapshot.json
 odm/etc/camera/xiaomi/thirdpartyrawsupernightjpeg.json
-odm/etc/camera/xiaomi/thirdpartyrawsupernightjpeg_ext.json
 odm/etc/camera/xiaomi/thirdpartyrawsupernightyuv.json
-odm/etc/camera/xiaomi/thirdpartyrawsupernightyuv_ext.json
 odm/etc/camera/xiaomi/thirdpartysnapshot.json
 odm/etc/camera/xiaomiSceneDetection.xml
 odm/etc/camera/xmi_slmt_4x_1080p.dlc
@@ -882,6 +890,7 @@ odm/lib64/libmiai_portraitsupernight.so
 odm/lib64/libmialgo_ai_vision.so
 odm/lib64/libmialgo_aio_seg.so
 odm/lib64/libmialgo_depth.so
+odm/lib64/libmialgo_ellc.so
 odm/lib64/libmialgo_globalsaliency.so
 odm/lib64/libmialgo_ie_capture.so
 odm/lib64/libmialgo_rfs.so
@@ -935,6 +944,7 @@ odm/lib64/libqshcamera.so
 odm/lib64/librawnrv2_shared.so
 odm/lib64/libremosaic_wrapper.so
 odm/lib64/libremosaiclib.so
+odm/lib64/librmsclib1.so
 odm/lib64/libsdr2hdr.so
 odm/lib64/libsfeShiftExtrapolation.so
 odm/lib64/libsupermoon.so
@@ -1118,6 +1128,7 @@ odm/lib64/camera/plugins/com.xiaomi.plugin.memcpy.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.miaideblur.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.miaiportraitsupernight.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.miairawhdr.so
+odm/lib64/camera/plugins/com.xiaomi.plugin.mialgoellc.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.mialgosnsc.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.offlinepostproc.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.portraitrepair.so
@@ -1127,44 +1138,29 @@ odm/lib64/camera/plugins/com.xiaomi.plugin.tsskinbeautifier.so
 
 # Camera sensors
 odm/lib64/camera/aon_front.pb
-odm/lib64/camera/com.qti.actuator.fuxi_semco_imx800_ak7314_wide_actuator.so
-odm/lib64/camera/com.qti.actuator.fuxi_semco_s5k3k1_ak7314_tele_actuator.so
-odm/lib64/camera/com.qti.actuator.fuxi_semco_s5k3k1_ak7314_tele_actuator_ii.so
-odm/lib64/camera/com.qti.actuator.fuxi_sunny_imx800_ak7314_wide_actuator_ii.so
-odm/lib64/camera/com.qti.eeprom.fuxi_ofilm_ov13b10_gt24p64e_ultra_eeprom.so
-odm/lib64/camera/com.qti.eeprom.fuxi_semco_imx800_p24c128f_wide_eeprom.so
-odm/lib64/camera/com.qti.eeprom.fuxi_semco_s5k3k1_p24c64f_tele_eeprom_ii.so
-odm/lib64/camera/com.qti.eeprom.fuxi_semo_s5k3k1_p24c64f_tele_eeprom.so
-odm/lib64/camera/com.qti.eeprom.fuxi_sunny_imx800_gt24p256f_wide_eeprom_ii.so
-odm/lib64/camera/com.qti.eeprom.fuxi_sunny_ov32c_gt24p64e_front_eeprom.so
-odm/lib64/camera/com.qti.ois.fuxi_imx800_bu24721_ois.so
-odm/lib64/camera/com.qti.ois.fuxi_imx800_bu24721_ois_2.so
-odm/lib64/camera/com.qti.ois.fuxi_s5k3k1_bu24618_ois_ii.so
-odm/lib64/camera/com.qti.ois.fuxi_s5k3k1_bu24721_ois.so
-odm/lib64/camera/com.qti.sensor.fuxi_ofilm_ov13b10_ultra.so
-odm/lib64/camera/com.qti.sensor.fuxi_semco_imx800_wide.so
-odm/lib64/camera/com.qti.sensor.fuxi_semco_s5k3k1_tele.so
-odm/lib64/camera/com.qti.sensor.fuxi_semco_s5k3k1_tele_ii.so
-odm/lib64/camera/com.qti.sensor.fuxi_sunny_imx800_wide_ii.so
-odm/lib64/camera/com.qti.sensor.fuxi_sunny_ov32c_front.so
-odm/lib64/camera/com.qti.sensormodule.fuxi_ofilm_ov13b10_ultra.bin
-odm/lib64/camera/com.qti.sensormodule.fuxi_semco_imx800_wide.bin
-odm/lib64/camera/com.qti.sensormodule.fuxi_semco_s5k3k1_tele.bin
-odm/lib64/camera/com.qti.sensormodule.fuxi_semco_s5k3k1_tele_ii.bin
-odm/lib64/camera/com.qti.sensormodule.fuxi_sunny_imx800_wide_ii.bin
-odm/lib64/camera/com.qti.sensormodule.fuxi_sunny_ov32c_front.bin
-odm/lib64/camera/com.qti.sensormodule.qti_tpg0.bin
-odm/lib64/camera/com.qti.sensormodule.qti_tpg1.bin
-odm/lib64/camera/com.qti.sensormodule.qti_tpg2.bin
+odm/lib64/camera/com.qti.actuator.nuwa_ofilm_s5kjn1_dw9800v_tele_actuator.so
+odm/lib64/camera/com.qti.actuator.nuwa_ofilm_s5kjn1_dw9800v_ultra_actuator.so
+odm/lib64/camera/com.qti.actuator.nuwa_semco_imx989_ak7316_wide_actuator.so
+odm/lib64/camera/com.qti.eeprom.nuwa_ofilm_s5kjn1_gt24p128f_ultra_eeprom.so
+odm/lib64/camera/com.qti.eeprom.nuwa_ofilm_s5kjn1_p24c128f_tele_eeprom.so
+odm/lib64/camera/com.qti.eeprom.nuwa_semco_imx989_p24c128f_wide_eeprom.so
+odm/lib64/camera/com.qti.eeprom.nuwa_sunny_ov32c_gt24p64e_front_eeprom.so
+odm/lib64/camera/com.qti.ois.nuwa_tele_bu24618_ois.so
+odm/lib64/camera/com.qti.ois.nuwa_wide_bu24618_ois.so
+odm/lib64/camera/com.qti.sensor.nuwa_ofilm_s5kjn1_tele.so
+odm/lib64/camera/com.qti.sensor.nuwa_ofilm_s5kjn1_ultra.so
+odm/lib64/camera/com.qti.sensor.nuwa_semco_imx989_wide.so
+odm/lib64/camera/com.qti.sensor.nuwa_sunny_ov32c_front.so
+odm/lib64/camera/com.qti.sensormodule.nuwa_ofilm_s5kjn1_tele.bin
+odm/lib64/camera/com.qti.sensormodule.nuwa_ofilm_s5kjn1_ultra.bin
+odm/lib64/camera/com.qti.sensormodule.nuwa_semco_imx989_wide.bin
+odm/lib64/camera/com.qti.sensormodule.nuwa_sunny_ov32c_front.bin
 odm/lib64/camera/com.qti.tuned.default.bin
-odm/lib64/camera/com.qti.tuned.fuxi_ofilm_ov13b10_ultra.bin
-odm/lib64/camera/com.qti.tuned.fuxi_semco_imx800_wide.bin
-odm/lib64/camera/com.qti.tuned.fuxi_semco_s5k3k1_tele.bin
-odm/lib64/camera/com.qti.tuned.fuxi_semco_s5k3k1_tele_ii.bin
-odm/lib64/camera/com.qti.tuned.fuxi_sunny_imx800_wide.bin
-odm/lib64/camera/com.qti.tuned.fuxi_sunny_ov32c_front.bin
-odm/lib64/camera/com.qti.tuned.fuxi_sunny_ov32c_front_global.bin
-odm/lib64/camera/com.qti.tuned.tpg.bin
+odm/lib64/camera/com.qti.tuned.nuwa_ofilm_s5kjn1_tele.bin
+odm/lib64/camera/com.qti.tuned.nuwa_ofilm_s5kjn1_ultra.bin
+odm/lib64/camera/com.qti.tuned.nuwa_semco_imx989_wide.bin
+odm/lib64/camera/com.qti.tuned.nuwa_sunny_ov32c_front.bin
+odm/lib64/camera/com.qti.tuned.nuwa_sunny_ov32c_front_global.bin
 odm/lib64/camera/fdconfigpreview.bin
 odm/lib64/camera/fdconfigpreviewlite.bin
 odm/lib64/camera/fdconfigsecure.bin
@@ -1172,18 +1168,12 @@ odm/lib64/camera/fdconfigvideo.bin
 odm/lib64/camera/fdconfigvideolite.bin
 
 # Camera Specific Firmware
-odm/firmware/fuxi_imx800_bu24721_ois.coeff
-odm/firmware/fuxi_imx800_bu24721_ois.mem
-odm/firmware/fuxi_imx800_bu24721_ois.prog
-odm/firmware/fuxi_imx800_bu24721_ois_2.coeff
-odm/firmware/fuxi_imx800_bu24721_ois_2.mem
-odm/firmware/fuxi_imx800_bu24721_ois_2.prog
-odm/firmware/fuxi_s5k3k1_bu24618_ois_ii.coeff
-odm/firmware/fuxi_s5k3k1_bu24618_ois_ii.mem
-odm/firmware/fuxi_s5k3k1_bu24618_ois_ii.prog
-odm/firmware/fuxi_s5k3k1_bu24721_ois.coeff
-odm/firmware/fuxi_s5k3k1_bu24721_ois.mem
-odm/firmware/fuxi_s5k3k1_bu24721_ois.prog
+odm/firmware/nuwa_tele_bu24618_ois.coeff
+odm/firmware/nuwa_tele_bu24618_ois.mem
+odm/firmware/nuwa_tele_bu24618_ois.prog
+odm/firmware/nuwa_wide_bu24618_ois.coeff
+odm/firmware/nuwa_wide_bu24618_ois.mem
+odm/firmware/nuwa_wide_bu24618_ois.prog
 
 # Camera Firmware
 odm/firmware/CAMERA_ICP.b00
@@ -1445,39 +1435,39 @@ vendor/lib64/libsdm-color.so|c36b857c03f1ac8e89882fd59812ae501e4c9772
 
 # Display calibration data
 odm/etc/df_default.xml
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/clstc/ClstcLut0.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/clstc/ClstcLutInfo.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/clstc/PicHDRLchIn.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/clstc/clstc_gc_0.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/clstc/clstc_igc_0.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLutInfo.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_0.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_1.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_10.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_11.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_12.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_13.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_14.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_15.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_16.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_17.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_18.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_19.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_2.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_20.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_3.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_4.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_5.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_6.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_7.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_8.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/miLut_9.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/mi_gc_0.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/mi_gc_1.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/mi_gc_2.txt
-odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/mi_gc_3.txt
-odm/etc/display/qdcm_calib_data_xiaomi_m3_38_0c_0a_sec_cmd_mode_dsc_dsi_panel.json
-odm/etc/mdss_dsi_m3_38_0c_0a_dsc_cmd_mi.xml
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/clstc/ClstcLut0.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/clstc/ClstcLutInfo.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/clstc/PicHDRLchIn.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/clstc/clstc_gc_0.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/clstc/clstc_igc_0.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLutInfo.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_0.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_1.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_10.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_11.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_12.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_13.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_14.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_15.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_16.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_17.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_18.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_19.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_2.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_20.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_3.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_4.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_5.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_6.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_7.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_8.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/miLut_9.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/mi_gc_0.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/mi_gc_1.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/mi_gc_2.txt
+odm/etc/disp0/mdss_dsi_m2_38_0c_0a_dsc_cmd/mi_gc_3.txt
+odm/etc/display/qdcm_calib_data_xiaomi_38_0c_0a_cmd_mode_dsc_dsi_panel.json
+odm/etc/mdss_dsi_m2_38_0c_0a_dsc_cmd_mi.xml
 vendor/etc/df_default.xml
 vendor/etc/display/3dlut-pt-onnx-ptq-htp-fp16.dlc
 vendor/etc/display/LUT0.txt
@@ -1614,8 +1604,8 @@ vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libfastcvopt.so
 
 # Fingerprint
-odm/lib64/hw/fingerprint.goodix_fod.so:odm/lib64/hw/fingerprint.goodix_fod.default.so;FIX_SONAME
-odm/lib64/libgf_hal.so
+odm/lib64/hw/fingerprint.goodix_fod6.so:odm/lib64/hw/fingerprint.goodix_fod.default.so;FIX_SONAME
+odm/lib64/libgf_hal6.so
 vendor/etc/permissions/qti_fingerprint_interface.xml
 vendor/etc/vintf/manifest/fod.xml
 
@@ -2508,10 +2498,12 @@ vendor/lib64/vendor.xiaomi.sensor.citsensorservice@2.0.so
 # Sensors config
 odm/etc/sensors/config/ak991x_dri_0.json
 odm/etc/sensors/config/kailua_qsh_ble_0.json
+odm/etc/sensors/config/lightSensorConfig.json
 odm/etc/sensors/config/lsm6dso_0.json
 odm/etc/sensors/config/qsh_ble.json
 odm/etc/sensors/config/qsh_camera.json
 odm/etc/sensors/config/sm8550_ak991x_0.json
+odm/etc/sensors/config/sm8550_bmp5_0.json
 odm/etc/sensors/config/sm8550_default_sensors.json
 odm/etc/sensors/config/sm8550_dynamic_sensors.json
 odm/etc/sensors/config/sm8550_irq.json
@@ -2522,6 +2514,7 @@ odm/etc/sensors/config/sm8550_sx937x_0.json
 odm/etc/sensors/config/sm8550_tcs3408.json
 odm/etc/sensors/config/sm8550_tcs3720.json
 odm/etc/sensors/config/sm8550_tcs3720_fb.json
+odm/etc/sensors/config/sm8550_vl53l1_tof_0.json
 odm/etc/sensors/config/sns_amd.json
 odm/etc/sensors/config/sns_amd_sw_disabled.json
 odm/etc/sensors/config/sns_aod.json
@@ -2546,6 +2539,7 @@ odm/etc/sensors/config/sns_nonui.json
 odm/etc/sensors/config/sns_oem13.json
 odm/etc/sensors/config/sns_oem_pocket.json
 odm/etc/sensors/config/sns_pedometer.json
+odm/etc/sensors/config/sns_pointing_light_source.json
 odm/etc/sensors/config/sns_rmd.json
 odm/etc/sensors/config/sns_rotv.json
 odm/etc/sensors/config/sns_sar_algo.json
@@ -2556,6 +2550,10 @@ odm/etc/sensors/config/sns_tilt.json
 odm/etc/sensors/config/sns_tilt_sw_disabled.json
 odm/etc/sensors/config/sns_tilt_to_wake.json
 odm/etc/sensors/config/sx933x_0.json
+odm/etc/sensors/config/sx937x_0.json
+odm/etc/sensors/config/sx937x_reg_0.json
+odm/etc/sensors/config/tcs3408.json
+odm/etc/sensors/config/vl53l1_tof_0.json
 vendor/etc/sensors/config/chre_dynamic_sensors.json
 vendor/etc/sensors/sns_reg_config
 
@@ -2622,7 +2620,7 @@ vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
 # Touch firmware
-odm/firmware/st_fts_m3.ftb
+odm/firmware/st_fts_m2.ftb
 odm/firmware/stm_fts_production_limits.csv
 
 # Trusted Execution Environment connector
