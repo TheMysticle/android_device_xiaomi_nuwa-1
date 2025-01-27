@@ -18,16 +18,13 @@
 */
 -->
 <resources>
-    <!-- Default radius of the software rounded corners. -->
-    <dimen name="rounded_corner_radius">120.0px</dimen>
-
     <!-- Radius of the software rounded corners at the top of the display in its natural
         orientation. If zero, the value of rounded_corner_radius is used. -->
-    <dimen name="rounded_corner_radius_top">120.0px</dimen>
+    <dimen name="rounded_corner_radius_top">140.0px</dimen>
 
     <!-- Radius of the software rounded corners at the bottom of the display in its natural
         orientation. If zero, the value of rounded_corner_radius is used. -->
-    <dimen name="rounded_corner_radius_bottom">120.0px</dimen>
+    <dimen name="rounded_corner_radius_bottom">140.0px</dimen>
 
     <!-- The default height of the status bar used in {@link SystemBarUtils#getStatusBarHeight} to
          calculate the status bar height. -->
