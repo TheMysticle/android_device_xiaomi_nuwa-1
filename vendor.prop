@@ -350,3 +350,6 @@ ro.hardware.wlan.chip=kiwi_v2
 ro.hardware.wlan.mimo=1
 ro.hardware.wlan.dbs=2
 ro.vendor.net.enable_passpoint_r1=1
+
+# Sensors
+ro.vendor.sensors.xiaomi.single_tap=true
