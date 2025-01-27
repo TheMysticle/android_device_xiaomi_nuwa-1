@@ -188,7 +188,6 @@ repeater-i2c-eusb2.ko
 redriver.ko
 nb7vpq904m.ko
 xiaomi_touch.ko
-goodix_core.ko
 pm8941-pwrkey.ko
 qcom-hv-haptics.ko
 goodix_fod.ko
@@ -320,3 +319,4 @@ sync_fence.ko
 hdcp_qseecom_dlkm.ko
 msm-mmrm.ko
 msm_ext_display.ko
+fts_touch_spi.ko

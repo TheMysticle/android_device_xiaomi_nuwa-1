@@ -122,7 +122,6 @@ repeater-qti-pmic-eusb2.ko
 repeater-i2c-eusb2.ko
 nb7vpq904m.ko
 xiaomi_touch.ko
-goodix_core.ko
 pm8941-pwrkey.ko
 mtdoops.ko
 mtd.ko
@@ -283,3 +282,4 @@ rmnet_shs.ko
 wcd939x_slave_dlkm.ko
 radio-i2c-rtc6226-qca.ko
 ipanetm.ko
+fts_touch_spi.ko
