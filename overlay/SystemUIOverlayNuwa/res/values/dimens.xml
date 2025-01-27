@@ -22,6 +22,9 @@
     <!-- the padding on the top of the statusbar (usually 0) -->
     <dimen name="status_bar_padding_top">24.0px</dimen>
     
+    <!-- Adjust the icon padding in status bar for rounded corners. -->
+    <dimen name="rounded_corner_content_padding">72.0px</dimen>
+
     <!-- Pixel pitch of the device. um/px -->
     <item name="pixel_pitch" format="float" type="dimen">48.28</item>
 </resources>
