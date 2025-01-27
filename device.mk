@@ -240,6 +240,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlay
 PRODUCT_PACKAGES += \
+    ApertureOverlayNuwa \
     CarrierConfigOverlayNuwa \
     FrameworkResOverlayNuwa \
     SystemUIOverlayNuwa \
