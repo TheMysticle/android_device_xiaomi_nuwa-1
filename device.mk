@@ -258,6 +258,7 @@ PRODUCT_PACKAGES += \
     FrameworkResOverlayNuwa \
     SystemUIOverlayNuwa \
     SettingsOverlayNuwa \
+		WifiResCommonMainline_Sys \
 		WifiOverlayNuwa \
     TelephonyOverlayNuwa
 
