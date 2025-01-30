@@ -229,12 +229,6 @@ PRODUCT_PACKAGES += \
     libnetfilter_conntrack \
     libnfnetlink
 
-#Shim
-PRODUCT_PACKAGES += \
-		libcodec2_hidl_shim \
-		qcodec2_shim \
-		dolbycodec_shim
-
 # NFC
 PRODUCT_PACKAGES += \
     nqnfcinfo
