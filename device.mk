@@ -35,7 +35,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
     audio.primary.default \
     audio.r_submix.default \
-		XiaomiDolby \
     libtinycompress
 
 PRODUCT_PACKAGES += \
