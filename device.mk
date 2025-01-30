@@ -258,6 +258,7 @@ PRODUCT_PACKAGES += \
     FrameworkResOverlayNuwa \
     SystemUIOverlayNuwa \
     SettingsOverlayNuwa \
+		WifiOverlayNuwa \
     TelephonyOverlayNuwa
 
 # Power
