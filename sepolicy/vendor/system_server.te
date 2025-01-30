@@ -1,0 +1,8 @@
+# Camera
+allow system_server hal_camera:binder transfer;
+allow system_server hal_camera:binder { call transfer };
+allow system_server hal_camera:fd *;
+
+# Misys
+allow system_server hal_misys_default:binder call;
+allow system_server hal_misys_hwservice:hwservice_manager find;
