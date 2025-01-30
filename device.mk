@@ -10,6 +10,9 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
+# Camera
+$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
+
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -32,6 +35,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
     audio.primary.default \
     audio.r_submix.default \
+		XiaomiDolby \
     libtinycompress
 
 PRODUCT_PACKAGES += \
@@ -135,7 +139,7 @@ PRODUCT_PACKAGES += \
 # DSP Volume Synchronizer
 PRODUCT_PACKAGES += \
     DSPVolumeSynchronizer
-    
+
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -224,6 +228,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libnetfilter_conntrack \
     libnfnetlink
+
+#Shim
+PRODUCT_PACKAGES += \
+		libcodec2_hidl_shim \
+		qcodec2_shim \
+		dolbycodec_shim
 
 # NFC
 PRODUCT_PACKAGES += \
