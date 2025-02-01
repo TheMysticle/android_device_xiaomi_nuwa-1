@@ -14,6 +14,9 @@ $(call inherit-product, device/xiaomi/nuwa/device.mk)
 # Inherit LineageOS configurations
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# UDFPS
+TARGET_HAS_UDFPS := true
+
 PRODUCT_NAME := lineage_nuwa
 PRODUCT_DEVICE := nuwa
 PRODUCT_MODEL := 2210132C
