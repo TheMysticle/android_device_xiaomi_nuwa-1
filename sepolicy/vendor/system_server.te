@@ -6,3 +6,5 @@ allow system_server hal_camera:fd *;
 # Misys
 allow system_server hal_misys_default:binder call;
 allow system_server hal_misys_hwservice:hwservice_manager find;
+
+allow system_server isolated_compute_app:unix_stream_socket { getopt };

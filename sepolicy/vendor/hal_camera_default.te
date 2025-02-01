@@ -39,6 +39,8 @@ allow hal_camera_default sys_thermal_flash_state:file { getattr write };
 allow hal_camera_default sys_thermal_flash_state:file w_file_perms;
 allow hal_camera_default sys_thermal_torch_real_level:file { getattr write };
 allow hal_camera_default sys_thermal_torch_real_level:file w_file_perms;
+allow hal_camera_default system_data_file:dir { search };
+allow hal_camera_default tmpfs:dir search;
 
 r_dir_file(hal_camera_default, mnt_vendor_file)
 r_dir_file(hal_camera_default, camera_persist_file)
