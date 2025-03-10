@@ -37,6 +37,7 @@ get_prop(platform_app, vendor_display_prop)
 hal_client_domain(platform_app, hal_misys)
 hal_client_domain(platform_app, vendor_hal_camerapostproc_xiaomi)
 hal_client_domain(platform_app, hal_quickcamera)
+type vendor_panel_info_prop; 
 
 # Misys
 allow platform_app hal_misys_hwservice:hwservice_manager find;
