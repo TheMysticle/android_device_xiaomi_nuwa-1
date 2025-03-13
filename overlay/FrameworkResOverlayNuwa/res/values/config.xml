@@ -648,6 +648,9 @@
     -->
     <bool name="config_enableWifiDisplay">true</bool>
 
+    <!-- If device supports pickup/lift gesture -->
+    <bool name="config_dozePulsePickup">true</bool>
+
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
 
