@@ -7,7 +7,7 @@ allow platform_app vendor_audio_data_file:file { append create getattr open read
 get_prop(platform_app, vendor_audio_prop)
 
 # Camera
-allow platform_app adsprpcd_file:dir { getattr search read };
+allow platform_app adsprpcd_file:dir { getattr search read watch };
 allow platform_app adsprpcd_file:file { getattr open read };
 allow platform_app app_data_file:file execute;
 allow platform_app hal_camera_default:binder { call transfer };
